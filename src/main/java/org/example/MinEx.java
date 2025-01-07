@@ -10,12 +10,10 @@ public class MinEx {
         int max = arr[0];
 
         for(int value: arr) {
-            if(value < min) {
-                min = value;
-            }
-            if(value > max){
-                max = value;
-            }
+
+            min = value < min ? value: min;
+            max = value > max ? value: max;
+
         }//for end
 
         System.out.println("MIN: " + min);
